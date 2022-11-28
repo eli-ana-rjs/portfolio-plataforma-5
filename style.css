@@ -1,0 +1,495 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --light-grey: #fafafa;
+    --dark-grey: rgba(143, 142, 142, 0.555);
+    --salmon: #fd9185;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+}
+
+a {
+    color: #353632;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--salmon);
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    padding-top: 3.75rem;
+}
+
+p {
+    line-height: 2em;
+}
+
+.curso {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+    padding: 80px 0;
+    min-height: 100vh;
+}
+
+.section-bg {
+    background-color: #e7f8f6;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--salmon);
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+header {
+    background: var(--light-grey);
+    box-shadow: 0px 0px 25px 0 rgba(0, 0, 0, 0.08);
+    z-index: 997;
+    padding: 15px 0;
+}
+
+header .logo {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header .logo a {
+    color: #222222;
+}
+
+header .logo img {
+    max-height: 40px;
+}
+
+
+/*---------------- Nav ---------------------------------*/
+
+/*     Desktop     */
+.navbar {
+    padding: 0;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar li {
+    position: relative;
+    padding: 10px 0 10px 28px;
+}
+
+.navbar a,
+.navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #888888;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+}
+
+.navbar a i,
+.navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+}
+
+.navbar>ul>li>a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--salmon);
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover:before,
+.navbar li:hover>a:before,
+.navbar .active:before {
+    visibility: visible;
+    width: 25px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+    color: #222222;
+}
+
+/*---------------------- Header Social Links ----------------------------*/
+.header-social-links {
+    padding-right: 15px;
+}
+
+.header-social-links a {
+    color: #6f6f6f;
+    padding-left: 6px;
+    display: inline-block;
+    line-height: 0px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.header-social-links a:hover {
+    color: var(--salmon);
+}
+
+/* ----------------- menu hamburguesa ------------*/
+
+.nav-mobile{
+    display: none;
+}
+
+
+
+/* ----------------- Main ---------------- */
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background: url("./img/fondoMarmol.png") top right;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.main .container {
+    padding-top: 70px;
+    position: relative;
+}
+
+.main h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #222222;
+}
+
+.main h2 {
+    color: #6f6f6f;
+    margin: 10px 0 0 0;
+    font-size: 22px;
+}
+
+.main .btn-about {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: rgb(29, 25, 25);
+    background: var(--salmon);
+}
+
+.main .btn-about:hover {
+    background: #f3b2ab;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+
+section .portfolio {
+    background-color: pink;
+}
+
+.portfolio .portfolio-item {
+    margin-bottom: 30px;
+
+}
+
+.portfolio {
+    padding: 0;
+    margin: 0 auto 15px auto;
+    list-style: none;
+    text-align: center;
+    padding: 2px 15px;
+    background-color: rgb(255, 216, 223, 0.5);
+}
+
+.portfolio .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.portfolio .portfolio-wrap::before {
+    content: "";
+    background: #e0c3c3;
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio .portfolio-wrap .portfolio-info::before {
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transition: all 0.5s ease 0s;
+    z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info::after {
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transition: all 0.5s ease 0s;
+    z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+    color: #fff;
+    margin: 0 2px;
+    font-size: 35px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+    color: var(--salmon);
+}
+
+.portfolio .portfolio-wrap:hover::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+    opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::before {
+    top: 15px;
+    left: 15px;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::after {
+    bottom: 15px;
+    right: 15px;
+}
+
+/*-----------------------  Contact ---------------------------*/
+.contact {
+    width: 100%;
+}
+
+.contact .info i {
+    font-size: 20px;
+    color: var(--salmon);
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #f4f8f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #222222;
+}
+
+.contact .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #555555;
+}
+
+.contact .info .email,
+.contact .info .phone {
+    margin-top: 40px;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+    background: var(--salmon);
+    color: #fff;
+}
+
+.btn-enviar {
+    background-color: var(--salmon);
+    padding: 0 15px;
+    border-radius: 2px;
+    border: none;
+    margin-top: 25px;
+}
+
+/*---------------- Footer ---------------------------*/
+footer {
+    background: rgb(238, 234, 234);
+    padding: 15px 0;
+    color: #222222;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+footer i{
+    font-size: 2rem;
+}
+
+/* --------------------------- Media Queries --------------------*/
+
+@media (max-width: 992px) {
+    header .logo {
+        font-size: 28px;
+    }
+
+    .header-social-links {
+        display: none;
+    }
+
+    header .logo {
+        font-size: 1rem;
+    }
+
+    .main h1 {
+        font-size: 1.5em;
+        margin-top: 20%;
+    }
+
+    .nav-mobile{
+        display: block;
+    }
+
+    .nav-desktop{
+        display: none;
+    }
+
+   
+
+}
